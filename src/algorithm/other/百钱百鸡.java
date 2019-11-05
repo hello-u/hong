@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.other;
 
 /**
  * 公鸡5文钱一只，母鸡3文钱一只，小鸡3只一文钱，

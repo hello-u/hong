@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.other;
 
 /**
  * 五家人共用一口井，甲家的绳子用两条不够，还要再用乙家的绳子一条才能打到井水；

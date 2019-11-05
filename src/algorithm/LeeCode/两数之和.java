@@ -1,6 +1,8 @@
-package algorithm;
+package algorithm.LeeCode;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @ClassName TwoSum
@@ -8,7 +10,8 @@ import java.util.Arrays;
  * @Author hong
  * @Date 2019/2/25 11:56
  **/
-public class TwoSum {
+public class 两数之和 {
+
     public int[] twoSum(int[] arr,int target){
         if (null == arr){
             return null;
@@ -58,9 +61,35 @@ public class TwoSum {
     }
 
 
+    public int[] twoSum2(int[] arr,int target){
+        Map<Integer,Integer> map = new HashMap<>();
+        for (int i = 0;i < arr.length;i++){
+            int temp = target - arr[i];
+            map.put(i,arr[i]);
+        }
+        return  null;
+    }
+
+    /**
+     * 这个挺好的，机智
+     * @param arr
+     * @param target
+     * @return
+     */
+    public int[] twoSum3(int[] arr,int target){
+        HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
+        for(int i = 0;i< arr.length; i++){
+            int temp = target - arr[i];
+            if(map.containsKey(temp)) {
+                return new int[]{map.get(temp),i};
+            }
+            map.put(arr[i],i);
+        }
+        return  null;
+    }
     public static void main(String[] args) {
-        TwoSum instance = new TwoSum();
-        int[] res = instance.twoSum(new int[]{1, 3, 11, 23, 42, 25, 22, 5},14);
+        两数之和 instance = new 两数之和();
+        int[] res = instance.twoSum3(new int[]{1, 3, 11, 23, 42, 25, 22, 5},14);
         System.out.println(res[0]);
         System.out.println(res[1]);
     }

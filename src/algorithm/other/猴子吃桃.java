@@ -1,4 +1,4 @@
-package algorithm;
+package algorithm.other;
 
 /**
  * 猴子第一天摘下若干个桃子，当即吃了一半，还不过瘾就多吃了一个。第二天早上又将剩下的桃子吃了一半，还是不过瘾又多
